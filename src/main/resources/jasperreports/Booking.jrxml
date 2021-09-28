@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Booking" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6a55f84c-7463-4e8d-befa-e9b4fc0cc484">
+	<parameter name="smestajNaziv" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="konferencija.pocetak" class="java.time.LocalDate"/>
+	<field name="polaznik.imePrezime" class="java.lang.String"/>
+	<field name="soba.brojSobe" class="java.lang.String"/>
+	<field name="konferencija.kraj" class="java.time.LocalDate"/>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{soba.brojSobe}]]></groupExpression>
+		<groupHeader>
+			<band height="41">
+				<textField>
+					<reportElement x="60" y="0" width="152" height="30" uuid="b4c6abc8-2a8f-4cc8-8949-c972693b3606"/>
+					<textElement textAlignment="Center">
+						<font size="18"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{soba.brojSobe}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="6" y="0" width="100" height="30" uuid="ec2dc4cf-90f7-4464-a54d-6ea7f636446d"/>
+					<textElement>
+						<font size="18"/>
+					</textElement>
+					<text><![CDATA[Soba: ]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="47" splitType="Stretch">
+			<textField>
+				<reportElement x="60" y="0" width="330" height="30" uuid="fb088d78-3f11-41f5-b077-5c67f79cb6bd"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{smestajNaziv}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="192" height="30" uuid="252569ef-ee3d-4f2c-b860-37ac5058aeb4"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Smestaj]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="48" splitType="Stretch">
+			<textField>
+				<reportElement x="280" y="0" width="140" height="30" uuid="eef0e6ed-f32b-471a-a0b7-e911c44a38fa">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="95197756-203b-4486-abe7-bb211fded6c4"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{konferencija.pocetak}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="280" height="30" uuid="eb089ddf-5a15-4466-a3e6-dc7c3700044d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="05c1b376-b457-4854-8167-4b0246ece9ce"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{polaznik.imePrezime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="0" width="130" height="30" uuid="34ce13c9-c6ce-45be-81e1-25c380a002d8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ea35aa80-a19d-4955-91fe-0019c4b61c14"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{konferencija.kraj}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="260" y="10" width="100" height="19" uuid="b47e9aca-e314-4f8f-afdf-254648bf83d7"/>
+				<text><![CDATA[Od:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="10" width="100" height="19" uuid="7e931c28-48e3-442d-9e7c-39a239e3d3ca"/>
+				<text><![CDATA[Do:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="262" y="24" width="30" height="30" uuid="4c85dad4-583f-4835-ace7-6a7c1d9801d8"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
